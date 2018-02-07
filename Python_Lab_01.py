@@ -52,10 +52,47 @@ class CtMLab01(object):
         LofL = [[.25, .75, .1], [-1, 0], [4, 4, 4, 4]]
         [sum(sum([[y] + [x] for y in [x for x in LofL]] for x in LofL))]
 
+    def task_thirteen(self):
+        #Suppose S is a set of integers, e.g. f􀀀4;􀀀2; 1; 2; 5; 0g. Write a triple comprehension whose value is a list of all three-element tuples (i; j; k) such that i; j; k are elements of S whose sum is zero.
+        S = {-4, -2, 1, 2, 5, 0}
+        (i for (i,j,k) in S if i != 0)
+
+    def task_seventeen(self):
+        list([x for x in range(99) if x %2 != 0])
+
+    def task_eighteen(self):
+        #Assign to L the list consisting of the rst ve letters ['A','B','C','D','E'] Next, use L in an expression whose
+        # value is [(0, 'A'), (1, 'B'), (2, 'C'), (3, 'D'), (4, 'E')] Your expression should use a range and a zip,
+        # but should not use a comprehension.
+        list(zip(['A','B','C','D','E'], range(5)))
+
+    def task_nineteen(self):
+        #Starting from the lists [10, 25, 40] and [1, 15, 20], write a comprehension whose value is the three-element
+        # list in which the rst element is the sum of 10 and 1, the second is the sum of 25 and 15, and the third is
+        # the sum of 40 and 20. Your expression should use zip but not list.
+        [x + y for (x, y) in zip([10, 25, 40], [1, 15, 20])]
+
+    def task_twenty(self):
+        #Suppose dlist is a list of dictionaries and k is a key that appears in all the dictionaries in dlist. Write a
+        # comprehension that evaluates to the list whose ith element is the value corresponding to key
+        # k in the ith dictionary in dlist.
+        dlist = [{'x': 'a', 'y': 'aa'}, {'x': 'b', 'y': 'bb'}, {'x': 'c', 'y': 'cc'}]
+        [k['x'] for k in dlist]
+
+        # for k in dlist:
+        #     print(k['x'])
+
+    def task_twentyone(self):
+        # dlist = [{'x': 'a', 'y': 'aa'}, {'x': 'b', 'y': 'bb'}, {'x': 'c', 'y': 'cc'}]
+        # [k['x'] for k in dlist if k in v else 'NOT PRESENT']
+        pass
+
+
+
 
 if __name__ == '__main__':
     ctm = CtMLab01()
-    ctm.test()
+    ctm.task_twenty()
 
 
 #  Set comprehensions
