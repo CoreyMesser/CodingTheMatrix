@@ -127,6 +127,28 @@ class CtMLab01(object):
         # [k['x'] for k in dlist if k in v else 'NOT PRESENT']
         pass
 
+    def task_twentytwo(self):
+        '''works'''
+
+        '''#Using range, write a comprehension whose value is a dictionary. The keys should be the integers
+        # from 0 to 99 and the value corresponding to a key should be the square of the key.'''
+
+        {k:v for (k,v) in (range(99), {k**2})}
+
+    def task_twentythree(self):
+        '''Assign to the variable D the set { red,white,blue}. Now write a comprehension that evaluates to a
+        dictionary that represents the identity function on D.'''
+
+        d = {'red', 'white', 'blue'}
+        {k:v for (k,v) in (d, {})}
+
+    def task_twentyfour(self):
+        pass
+
+
+
+
+
 
 
 
