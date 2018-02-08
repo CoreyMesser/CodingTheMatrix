@@ -145,6 +145,24 @@ class CtMLab01(object):
     def task_twentyfour(self):
         pass
 
+    def task_twentyfive(self):
+        id2salary = {0: 1000.0, 3: 990, 1: 1200.50}
+        names = ['Larry','Curly','','Moe']
+        {k:v for k in names for v in id2salary.values()}
+
+    #task_twentysix
+    def nextInts(self, L): return [1+x for x in L]
+
+    #task_twentyseven
+    def cubes(self, L): return [x**3 for x in L]
+
+    #task_twentyeight
+    def dict2list(self, dct, keylist): return [L for L in dct[keylist]]
+
+    #task_twentynine
+    L=['A','B','C']
+    keylist=['a','b','c'],
+    def list2dict(self, L, keylist): return {k:v for k in L for v in keylist}
 
 
 
